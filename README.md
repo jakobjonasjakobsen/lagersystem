@@ -5,7 +5,11 @@
             Copyright (C) BOOTYWIZARD ENTERPRISES, Inc.
                         No rights reserved.
 # Introduction
-This program 
+This program is in a early stage and has loads of room for improvement.
+
+It was developed for showcase of a simple storage system.
+
+It is possible to list current product information of items that are currently in stock, as well as adding more products to the code. However, in a future deviation of the program, it is planned for the use of either .csv or a database to store product information.
 
 # Prerequisites: 
 - Download the program
@@ -32,6 +36,30 @@ Linux
   - Ubuntu 20.04 LTS 64-bit
   - Red Hat Enterprise Linux 8.x 64-bit
   - Red Hat Enterprise Linux 7.x 64-bit
+
+# Usage
+
+* Run the program and select desired option:
+![img.png](img.png)
+
+### Select 1 to list options for the iPhones category
+
+### Select 2 to list options for the Windows PC category
+
+### Select 3 to list options for the Peripherals category
+
+![img_1.png](img_1.png)
+
+### Select 1 to list a single selected product
+
+### Select 2 to list all products in selected category
+
+
+### IF SINGLE PRODUCT WAS SELECTED:
+
+* Select a single product to be listed with corresponding number
+
+![img_2.png](img_2.png)
 
 # Contributing:
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
