@@ -1,3 +1,6 @@
+import time
+
+
 class Item:
 
     def __init__(self, navn: str, id: int, pris: float, beskrivelse: str, antal: int, hylde: int, plads: str, ):
@@ -20,7 +23,7 @@ class Item:
         return self.pris
 
     def total_price(self):
-        print("Samlet pris: ")
+        print("Samlet pris af lager: ")
         return self.pris * self.antal
 
     def pris_uden_moms(self):
@@ -28,10 +31,12 @@ class Item:
         return self.pris / 1.25
 
     def total_price_uden_moms(self):
-        print("Samlet pris uden moms: ")
+        print("Samlet pris af lager uden moms: ")
         return self.pris / 1.25 * self.antal
 
 # assign parametre til __init__
+
+
 item1 = Item("Laptop", 1, 799.99, "i5 16gb 3200 mHz gtx 1660", 7, 2, "Lagerrum 1")
 item2 = Item("Desktop", 2, 1499.95, "i7 4790k, 32 gb 3600 mhz, gtx 1660 ", 4, 1, "Lagerrum 1")
 item3 = Item("Headset", 3, 699.95, "SENNHEISER HD 350", 8, 4, "Lagerrum 1")
@@ -50,8 +55,8 @@ item15 = Item("iPhone 14", 15, 10999.95, "iPhone 14 64gb carrier unlocked", 5, 3
 
 
 # input menu og valg af output
-print ("Hvad har vi på lager? ")
-inp = "0"
+print("Hvad har vi på lager? ")
+
 print("KATEGORI: ")
 print("1. iPhone")
 print("2. PC:Windows")
@@ -144,61 +149,70 @@ if inp == "1":
         print(item6.pris_uden_moms())
         print(item6.total_price())
         print(item6.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item7.__dict__)
         print(item7.pris_pr_stk())
         print(item7.pris_uden_moms())
         print(item7.total_price())
         print(item7.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item8.__dict__)
         print(item8.pris_pr_stk())
         print(item8.pris_uden_moms())
         print(item8.total_price())
         print(item8.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item9.__dict__)
         print(item9.pris_pr_stk())
         print(item9.pris_uden_moms())
         print(item9.total_price())
         print(item9.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item10.__dict__)
         print(item10.pris_pr_stk())
         print(item10.pris_uden_moms())
         print(item10.total_price())
         print(item10.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item11.__dict__)
         print(item11.pris_pr_stk())
         print(item11.pris_uden_moms())
         print(item11.total_price())
         print(item11.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item12.__dict__)
         print(item12.pris_pr_stk())
         print(item12.pris_uden_moms())
         print(item12.total_price())
         print(item12.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item13.__dict__)
         print(item13.pris_pr_stk())
         print(item13.pris_uden_moms())
         print(item13.total_price())
         print(item13.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item14.__dict__)
         print(item14.pris_pr_stk())
         print(item14.pris_uden_moms())
         print(item14.total_price())
         print(item14.total_price_uden_moms())
+        time.sleep(1)
         print("--------------------------------------------------------------------------------------------------")
         print(item15.__dict__)
         print(item15.pris_pr_stk())
         print(item15.pris_uden_moms())
         print(item15.total_price())
         print(item15.total_price_uden_moms())
-
+        time.sleep(1)
 
 elif inp == "2":
     print("WINDOWS PC: ")
@@ -271,6 +285,3 @@ elif inp == "3":
         print(item5.pris_uden_moms())
         print(item5.total_price())
         print(item5.total_price_uden_moms())
-
-
-

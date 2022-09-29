@@ -9,7 +9,9 @@ This program
 
 # Prerequisites: 
 - Download the program
-- Be able to execute a python script
+
+# Installation:
+- git clone https://github.com/jakobjonasjakobsen/lagersystem.git
 
 # System requirements:
 Windows
@@ -31,9 +33,6 @@ Linux
   - Red Hat Enterprise Linux 8.x 64-bit
   - Red Hat Enterprise Linux 7.x 64-bit
 
-# Installation:
-- git clone https://github.com/jakobjonasjakobsen/lagersystem.git
-
 # Contributing:
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
@@ -47,18 +46,17 @@ Push to the Branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
 # Roadmap:
-- Make "placering + hylde" into an object on it's own because I just now realized it's part of the task
 - Make it easier to add new, change or modify products AND/OR implement .csv file usage (if it's free in Community Edition)
 - Add MOTD that each day displays a unique single image from a wide array of banging memes
 - Extend roadmap
 
 # License:
 - This unlicensed project is open source and free to use for everyone and all purposes.
+
 # Acknowledgments
 - Freecodecamp.org
 - TechCollege
 - w3schools
-- Lærke :o)
 
 # Contact:
 Jakob J. 
