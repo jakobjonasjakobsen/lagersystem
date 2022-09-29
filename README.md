@@ -40,6 +40,7 @@ Linux
 # Usage
 
 * Run the program and select desired option:
+
 ![img.png](img.png)
 
 ### Select 1 to list options for the iPhones category
@@ -47,6 +48,7 @@ Linux
 ### Select 2 to list options for the Windows PC category
 
 ### Select 3 to list options for the Peripherals category
+
 
 ![img_1.png](img_1.png)
 
