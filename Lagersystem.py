@@ -1,6 +1,9 @@
 import time
 
 
+
+
+
 class Item:
 
     def __init__(self, navn: str, id: int, pris: float, beskrivelse: str, antal: int, hylde: int, plads: str, ):
@@ -18,6 +21,7 @@ class Item:
         self.plads = plads
 
 # definér funktioner
+
     def pris_pr_stk(self):
         print("Pris pr stk med moms: ")
         return self.pris
@@ -34,29 +38,38 @@ class Item:
         print("Samlet pris af lager uden moms: ")
         return self.pris / 1.25 * self.antal
 
+
+
 # assign parametre til __init__
 
+liste_af_varer = []
+liste_af_varer.append(Item("Laptop", 1, 799.99, "i5 16gb 3200 mHz gtx 1660", 7, 2, "Lagerrum 1"))
+liste_af_varer.append(Item("Desktop", 2, 1499.95, "i7 4790k, 32 gb 3600 mhz, gtx 1660 ", 4, 1, "Lagerrum 1"))
+liste_af_varer.append(Item("Headset", 3, 699.95, "SENNHEISER HD 350", 8, 4, "Lagerrum 1"))
+liste_af_varer.append(Item("Mouse", 4, 499.95, "Logitech G Pro wireless", 11, 4, "Lagerrum 1"))
+liste_af_varer.append(Item("Monitor", 5, 1995.95, "ASUS VG258QR", 6, 4, "Lagerrum 1"))
+liste_af_varer.append(Item("iPhone 6", 6, 399.95, "refurb iPhone 6 64gb carrier unlocked", 4, 1, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone 7", 7, 499.95, "refurb iPhone 7 64gb carrier unlocked", 3, 1, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone 8", 8, 599.95, "refurb iPhone 8 64gb carrier unlocked", 7, 1, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone X", 9, 699.95, "refurb iPhone X 64gb carrier unlocked", 2, 2, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone XR", 10, 799.95, "refurb iPhone XR 64gb carrier unlocked", 4, 2, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone XS", 11, 899.95, "refurb iPhone XS 64gb carrier unlocked", 1, 2, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone 11", 12, 999.95, "refurb iPhone 11 64gb carrier unlocked", 7, 3, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone 12", 13, 1199.95, "refurb iPhone 12 64gb carrier unlocked", 6, 3, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone 13", 14, 1299.95, "refurb iPhone 13 64gb carrier unlocked", 5, 3, "Lagerrum 2"))
+liste_af_varer.append(Item("iPhone 14", 15, 10999.95, "iPhone 14 64gb carrier unlocked", 5, 3, "Lagerrum 2"))
 
-item1 = Item("Laptop", 1, 799.99, "i5 16gb 3200 mHz gtx 1660", 7, 2, "Lagerrum 1")
-item2 = Item("Desktop", 2, 1499.95, "i7 4790k, 32 gb 3600 mhz, gtx 1660 ", 4, 1, "Lagerrum 1")
-item3 = Item("Headset", 3, 699.95, "SENNHEISER HD 350", 8, 4, "Lagerrum 1")
-item4 = Item("Mouse", 4, 499.95, "Logitech G Pro wireless", 11, 4, "Lagerrum 1")
-item5 = Item("Monitor", 5, 1995.95, "ASUS VG258QR", 6, 4, "Lagerrum 1")
-item6 = Item("iPhone 6", 6, 399.95, "refurb iPhone 6 64gb carrier unlocked", 4, 1, "Lagerrum 2")
-item7 = Item("iPhone 7", 7, 499.95, "refurb iPhone 7 64gb carrier unlocked", 3, 1, "Lagerrum 2")
-item8 = Item("iPhone 8", 8, 599.95, "refurb iPhone 8 64gb carrier unlocked", 7, 1, "Lagerrum 2")
-item9 = Item("iPhone X", 9, 699.95, "refurb iPhone X 64gb carrier unlocked", 2, 2, "Lagerrum 2")
-item10 = Item("iPhone XR", 10, 799.95, "refurb iPhone XR 64gb carrier unlocked", 4, 2, "Lagerrum 2")
-item11 = Item("iPhone XS", 11, 899.95, "refurb iPhone XS 64gb carrier unlocked", 1, 2, "Lagerrum 2")
-item12 = Item("iPhone 11", 12, 999.95, "refurb iPhone 11 64gb carrier unlocked", 7, 3, "Lagerrum 2")
-item13 = Item("iPhone 12", 13, 1199.95, "refurb iPhone 12 64gb carrier unlocked", 6, 3, "Lagerrum 2")
-item14 = Item("iPhone 13", 14, 1299.95, "refurb iPhone 13 64gb carrier unlocked", 5, 3, "Lagerrum 2")
-item15 = Item("iPhone 14", 15, 10999.95, "iPhone 14 64gb carrier unlocked", 5, 3, "Lagerrum 2")
+
+def udskriv(index):
+    print(liste_af_varer[int(index)].__dict__)
+    print(liste_af_varer[int(index)].pris_pr_stk())
+    print(liste_af_varer[int(index)].pris_uden_moms())
+    print(liste_af_varer[int(index)].total_price())
+    print(liste_af_varer[int(index)].total_price_uden_moms())
 
 
 # input menu og valg af output
 print("Hvad har vi på lager? ")
-
 print("KATEGORI: ")
 print("1. iPhone")
 print("2. PC:Windows")
@@ -82,206 +95,48 @@ if inp == "1":
         print("9. Phone 13")
         print("10.Phone 14")
         inp = input("Vælg produkt: ")
-        if inp == "1":
-            print(item6.__dict__)
-            print(item6.pris_pr_stk())
-            print(item6.pris_uden_moms())
-            print(item6.total_price())
-            print(item6.total_price_uden_moms())
-        elif inp == "2":
-            print(item7.__dict__)
-            print(item7.pris_pr_stk())
-            print(item7.pris_uden_moms())
-            print(item7.total_price())
-            print(item7.total_price_uden_moms())
-        elif inp == "3":
-            print(item8.__dict__)
-            print(item8.pris_pr_stk())
-            print(item8.pris_uden_moms())
-            print(item8.total_price())
-            print(item8.total_price_uden_moms())
-        elif inp == "4":
-            print(item9.__dict__)
-            print(item9.pris_pr_stk())
-            print(item9.pris_uden_moms())
-            print(item9.total_price())
-            print(item9.total_price_uden_moms())
-        elif inp == "5":
-            print(item10.__dict__)
-            print(item10.pris_pr_stk())
-            print(item10.pris_uden_moms())
-            print(item10.total_price())
-            print(item10.total_price_uden_moms())
-        elif inp == "6":
-            print(item11.__dict__)
-            print(item11.pris_pr_stk())
-            print(item11.pris_uden_moms())
-            print(item11.total_price())
-            print(item11.total_price_uden_moms())
-        elif inp == "7":
-            print(item12.__dict__)
-            print(item12.pris_pr_stk())
-            print(item12.pris_uden_moms())
-            print(item12.total_price())
-            print(item12.total_price_uden_moms())
-        elif inp == "8":
-            print(item13.__dict__)
-            print(item13.pris_pr_stk())
-            print(item13.pris_uden_moms())
-            print(item13.total_price())
-            print(item13.total_price_uden_moms())
-        elif inp == "9":
-            print(item14.__dict__)
-            print(item14.pris_pr_stk())
-            print(item14.pris_uden_moms())
-            print(item14.total_price())
-            print(item14.total_price_uden_moms())
-        elif inp == "10":
-            print(item15.__dict__)
-            print(item15.pris_pr_stk())
-            print(item15.pris_uden_moms())
-            print(item15.total_price())
-            print(item15.total_price_uden_moms())
+        inp = int(inp)
+        index = 4 + inp
+
+        udskriv(index)
     else:
-        print("--------------------------------------------------------------------------------------------------")
-        print(item6.__dict__)
-        print(item6.pris_pr_stk())
-        print(item6.pris_uden_moms())
-        print(item6.total_price())
-        print(item6.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item7.__dict__)
-        print(item7.pris_pr_stk())
-        print(item7.pris_uden_moms())
-        print(item7.total_price())
-        print(item7.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item8.__dict__)
-        print(item8.pris_pr_stk())
-        print(item8.pris_uden_moms())
-        print(item8.total_price())
-        print(item8.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item9.__dict__)
-        print(item9.pris_pr_stk())
-        print(item9.pris_uden_moms())
-        print(item9.total_price())
-        print(item9.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item10.__dict__)
-        print(item10.pris_pr_stk())
-        print(item10.pris_uden_moms())
-        print(item10.total_price())
-        print(item10.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item11.__dict__)
-        print(item11.pris_pr_stk())
-        print(item11.pris_uden_moms())
-        print(item11.total_price())
-        print(item11.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item12.__dict__)
-        print(item12.pris_pr_stk())
-        print(item12.pris_uden_moms())
-        print(item12.total_price())
-        print(item12.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item13.__dict__)
-        print(item13.pris_pr_stk())
-        print(item13.pris_uden_moms())
-        print(item13.total_price())
-        print(item13.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item14.__dict__)
-        print(item14.pris_pr_stk())
-        print(item14.pris_uden_moms())
-        print(item14.total_price())
-        print(item14.total_price_uden_moms())
-        time.sleep(1)
-        print("--------------------------------------------------------------------------------------------------")
-        print(item15.__dict__)
-        print(item15.pris_pr_stk())
-        print(item15.pris_uden_moms())
-        print(item15.total_price())
-        print(item15.total_price_uden_moms())
-        time.sleep(1)
+        index = "5"
+        index = int(index)
+        for vare in liste_af_varer:
+            udskriv(index)
+            index = 1 + index
+
 
 elif inp == "2":
-    print("WINDOWS PC: ")
-    print("1. Print enkelt produkt")
-    print("2. Print alle produkter")
-    inp = input("Vælg valgmulighed")
-    if inp == "1":
-        print("Windows PC'er: ")
-        print("1. Laptop")
-        print("2. Desktop")
-        inp = input("Vælg produkt: ")
-        if inp == "1":
-            print(item1.__dict__)
-            print(item1.pris_pr_stk())
-            print(item1.pris_uden_moms())
-            print(item1.total_price())
-            print(item1.total_price_uden_moms())
-        elif inp == "2":
-            print(item2.__dict__)
-            print(item2.pris_pr_stk())
-            print(item2.pris_uden_moms())
-            print(item2.total_price())
-            print(item2.total_price_uden_moms())
+    print("Windows PC'er: ")
+    print("1. Laptop")
+    print("2. Desktop")
+    index = input("Vælg produkt: ")
+    index = int(index)
+    index = index - 1
+    udskriv(index)
+
+
 
 elif inp == "3":
-    print("PERIPHERALS: ")
+    print("PERIPHERALS CATEGORY: ")
     print("1. Print enkelt produkt")
     print("2. Print alle produkter")
     inp = input("Vælg valgmulighed")
     if inp == "1":
         print("PERIPHERALS: ")
         print("1. Headset")
-        print("2. Monitor")
-        print("3. Mouse")
-        inp = input("Vælg valgmulighed: ")
-        if inp == "1":
-            print(item3.__dict__)
-            print(item3.pris_pr_stk())
-            print(item3.pris_uden_moms())
-            print(item3.total_price())
-            print(item3.total_price_uden_moms())
-        elif inp == "2":
-            print(item5.__dict__)
-            print(item5.pris_pr_stk())
-            print(item5.pris_uden_moms())
-            print(item5.total_price())
-            print(item5.total_price_uden_moms())
-        elif inp == "3":
-            print(item4.__dict__)
-            print(item4.pris_pr_stk())
-            print(item4.pris_uden_moms())
-            print(item4.total_price())
-            print(item4.total_price_uden_moms())
+        print("2. Mouse")
+        print("3. Monitor")
+        index = input("Vælg valgmulighed: ")
+        index = int(index)
+        index = 1 + index
+        udskriv(index)
 
     elif inp == "2":
-        print(item3.__dict__)
-        print(item3.pris_pr_stk())
-        print(item3.pris_uden_moms())
-        print(item3.total_price())
-        print(item3.total_price_uden_moms())
-
-        print(item4.__dict__)
-        print(item4.pris_pr_stk())
-        print(item4.pris_uden_moms())
-        print(item4.total_price())
-        print(item4.total_price_uden_moms())
-
-        print(item5.__dict__)
-        print(item5.pris_pr_stk())
-        print(item5.pris_uden_moms())
-        print(item5.total_price())
-        print(item5.total_price_uden_moms())
+        index = 2
+        index = int(index)
+        for vare in liste_af_varer:
+            if index < 5:
+                udskriv(index)
+                index = 1 + index
