@@ -37,7 +37,7 @@ Linux
   - Red Hat Enterprise Linux 8.x 64-bit
   - Red Hat Enterprise Linux 7.x 64-bit
 
-# Usage
+# Usage:
 
 * Run the program and select desired option:
 
