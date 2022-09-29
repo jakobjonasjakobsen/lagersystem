@@ -43,23 +43,24 @@ Linux
 
 ![img.png](img.png)
 
-### Select 1 to list options for the iPhones category
+Select 1 to list options for the iPhones category
 
-### Select 2 to list options for the Windows PC category
+Select 2 to list options for the Windows PC category
 
-### Select 3 to list options for the Peripherals category
+Select 3 to list options for the Peripherals category
 
 
 ![img_1.png](img_1.png)
 
-### Select 1 to list a single selected product
+Select 1 to list a single selected product
 
-### Select 2 to list all products in selected category
+Select 2 to list all products in selected category
 
+---
 
-### IF SINGLE PRODUCT WAS SELECTED:
+IF SINGLE PRODUCT WAS SELECTED:
 
-* Select a single product to be listed with corresponding number
+Select a single product to be listed with corresponding number
 
 ![img_2.png](img_2.png)
 
